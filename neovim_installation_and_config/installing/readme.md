@@ -7,7 +7,7 @@ The following instructions detail how to install Neovim from source and add the 
 
 2. **Set Up Development Environment**
 
-3. **Install Necessary Build Tools and Dependencies, Including Git**
+3.<details><summary> **Install Necessary Build Tools and Dependencies, Including Git**</summary>
 
 **Package Descriptions:**
 
@@ -49,6 +49,8 @@ Xclip provides an interface to the X clipboard from the command line. While not 
 
 ### 13. `ninja-build`
 Ninja is a small, fast build system that Neovim uses as its primary build tool. It executes build processes in parallel, significantly speeding up the build process compared to traditional `make`.
+
+</details>
 
 4. **Clone the Neovim Repository**
 
