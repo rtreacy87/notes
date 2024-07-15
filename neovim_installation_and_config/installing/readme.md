@@ -7,9 +7,9 @@ The following instructions detail how to install Neovim from source and add the 
 
 2. **Set Up Development Environment**
 
-3. <details><summary> **Install Necessary Build Tools and Dependencies, Including Git**</summary>
+3. **Install Necessary Build Tools and Dependencies, Including Git**
 
-**Package Descriptions:**
+<details><summary>Package Descriptions:</summary>
 
 ### 1. `git`
 Git is necessary for cloning the Neovim repository from GitHub. It allows you to download the source code and contribute back if needed.
