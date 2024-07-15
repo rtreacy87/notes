@@ -7,7 +7,7 @@ The following instructions detail how to install Neovim from source and add the 
 
 2. **Set Up Development Environment**
 
-3.<details><summary> **Install Necessary Build Tools and Dependencies, Including Git**</summary>
+3. <details><summary> **Install Necessary Build Tools and Dependencies, Including Git**</summary>
 
 **Package Descriptions:**
 
