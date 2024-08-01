@@ -1,0 +1,10 @@
+
+#!/bin/bash
+
+repository="$1"
+key="$2"
+username_repo=$(echo "$repository" | sed 's|https://github.com/||')
+new_url="https://$key@github.com/$username_repo"
+git clone "$new_url"
+
+
