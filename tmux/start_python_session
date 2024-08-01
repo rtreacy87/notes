@@ -1,0 +1,27 @@
+#!/bin/bash
+
+session_name="$1"
+
+# Check if the session name is null or empty and set default if needed
+if [ -z "$session_name" ]; then
+    session_name="python_session"
+fi
+
+# Create a new tmux session with the given name and detach
+tmux new-session -d -s "$session_name"
+
+# Rename the window to "editor"
+tmux rename-window -t "$session_name":0 editor
+
+# Split the window vertically
+tmux split-window -h -t "$session_name":0
+
+# Select the left pane (pane 0) and run Neovim
+tmux send-keys -t "$session_name":0.0 'nvim' C-m
+
+# Select the right pane (pane 1) and run Python3
+tmux send-keys -t "$session_name":0.1 'python3' C-m
+
+# Attach to the tmux session
+tmux attach-session -t "$session_name"
+
