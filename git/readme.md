@@ -67,4 +67,46 @@ This guide explains how to set up your environment to pass credentials for pulli
    ```sh
    echo $PATH
    ```
+   run
+   ```sh
+   tr ":" "\n" <<< $PATH
+   ```
+   to see all the results on new lines.
+
+
+## Setting up the function to clone the repositories
+
+1. **Create the Script Directory**: 
+   Ensure you have a directory to store your custom scripts, e.g., `~/bin`.
+
+2. **Create the Script**: 
+   Copy the following into a new script in the `~/bin` directory, naming it `git_clone_with_key`:
+
+   ```sh
+   #!/bin/bash
+
+   repository="$1"
+   key="$2"
+   username_repo=$(echo "$repository" | sed 's|https://github.com/||')
+   new_url="https://$key@github.com/$username_repo"
+   git clone "$new_url"
+   ```
+
+3. **Make the Script Executable**: 
+   Change the execution permissions of the script:
+
+   ```sh
+   chmod +x ~/bin/git_clone_with_key
+   ```
+
+4. **Use the Script**: 
+   You can now call the script with the repository URL as the first argument and your key as the second:
+
+   ```sh
+   ~/bin/git_clone_with_key <repository_url> <key>
+   ```
+
+Replace `<repository_url>` and `<key>` with the actual repository URL and your key, respectively.
+
+This script will clone the repository using the provided key for authentication.
 
