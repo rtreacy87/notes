@@ -56,3 +56,18 @@
 ### Decapsulation
 
 - The reverse process of encapsulation, where each layer removes its corresponding header or trailer and processes the encapsulated data until the original data is retrieved.
+
+
+## Mnemonic for Remembering OSI Model Layers
+
+"**Please Do Not Throw Sausage Pizza Away**"
+
+- **P**hysical
+- **D**ata Link
+- **N**etwork
+- **T**ransport
+- **S**ession
+- **P**resentation
+- **A**pplication
+
+
