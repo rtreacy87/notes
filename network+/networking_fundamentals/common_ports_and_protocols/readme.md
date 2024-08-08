@@ -113,7 +113,7 @@
 
 ## Mnemonic for Protocols and Ports
 
-**"Friendly Sharks Swim Through Sunny Days, Trying Hard, Helping People, Not Ignoring Small Lovely Ducks. Happy Seals Snuggle Softly, Pretending Sleep. My Sister Makes Really Sweet Ice Pops."**
+**"Friendly Sharks Swim Through Sunny Days, Trying Hard, Helping People, Not Ignoring Small Lovely Lakes. Silly Seals Play Softly, Seeking Sleep. Rabbit's Sister Makes Many Sweet Ice Pops."**
 
 Here's how it breaks down:
 
@@ -131,17 +131,17 @@ Here's how it breaks down:
 12. **Ignoring** - **IMAP** (143)
 13. **Small** - **SNMP** (161/162)
 14. **Lovely** - **LDAP** (389)
-15. **Ducks** - **LDAPS** (636)
-16. **Happy** - **SMTP TLS** (587)
+15. **Lakes** - **LDAPS** (636)
+16. **Silly** - **SMTP TLS** (587)
 17. **Seals** - **IMAP over SSL** (993)
-18. **Snuggle** - **POP3 over SSL** (995)
+18. **Play** - **POP3 over SSL** (995)
 19. **Softly** - **SQL Server** (1433)
-20. **Pretending** - **SQLnet** (1521)
+20. **Seeking** - **SQLnet** (1521)
 21. **Sleep** - **MySQL** (3306)
-22. **My** - **RDP** (3389)
+22. **Rabbit's** - **RDP** (3389)
 23. **Sister** - **SIP** (5060/5061)
 24. **Makes** - **MPLS**
-25. **Really** - **mGRE**
+25. **Many** - **mGRE**
 26. **Sweet** - **SDWAN**
 27. **Ice** - **IPSec**
 28. **Pops** - **Point-to-Point Protocol (PPP)**
