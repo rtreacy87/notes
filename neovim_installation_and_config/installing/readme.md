@@ -110,3 +110,19 @@ nvim
 ```
 the rest of the installation will occur automatically.
 
+### Installing Pyright LSP
+
+The `pyright` lsp requires node js to be installed on you machine. On Ubuntu this is is installed via the shell command
+
+```sh
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+afterward you can verify the installation by running
+
+```sh
+node -v
+npm -v
+```
+as long as both off those have versions then neovim will install pyright via the `Mason` plugin.
