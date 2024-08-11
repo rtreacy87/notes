@@ -1,78 +1,75 @@
-# SSH Setup: Mac to Ubuntu
-
+# SSH Setup Guide: Mac to Ubuntu
 
 ## Setup Ubuntu
 
-1. Make sure SSH is installed on Ubuntu
-```sh
-sudo apt update
-sudo apt install openssh-server
-```
+1. Install SSH on Ubuntu:
+   ```sh
+   sudo apt update
+   sudo apt install openssh-server
+   ```
 
-2. Verify that ssh is running on the system
-```sh
-sudo systemctl status ssh
-```
-if ssh is not running start it by running
-```sh
-sudo systemctl start ssh
-```
-3. Find Ubuntu IP Address
+2. Verify SSH is running:
+   ```sh
+   sudo systemctl status ssh
+   ```
+   If not running, start it:
+   ```sh
+   sudo systemctl start ssh
+   ```
 
-can be found by running
-```sh
-ip addr show
-```
-
-look for the IPv4 address (usually starts with 192.168.x.x or 10.0.0.x)
+3. Find Ubuntu IP Address:
+   ```sh
+   ip addr show
+   ```
+   Look for the IPv4 address (usually starts with 192.168.x.x or 10.0.0.x)
 
 ## Setup Mac
 
-1. open up mac to remote login
-    - go to `system setting`
-    - search for `sharing`
-    - scroll do to advanced and toggle `Remote Login`
+1. Enable Remote Login:
+   - Go to System Settings
+   - Search for "Sharing"
+   - Scroll down to Advanced and toggle "Remote Login"
 
-2. Find you mac IPv4 address
-```sh
-ipconfig getifaddr en0
-```
-this is for wireless
+2. Find Mac IPv4 address (for wireless):
+   ```sh
+   ipconfig getifaddr en0
+   ```
 
 ## SSH into the Machines
 
-1. From Ubuntu to Mac 
-```sh
-ssh username@mac_ip_address
-```
-2. From Mac to Ubuntu
-```sh
-ssh username@ubuntu_ip_address
-```
+1. From Ubuntu to Mac:
+   ```sh
+   ssh username@mac_ip_address
+   ```
 
-## (Optional) Setup to not require passwords
+2. From Mac to Ubuntu:
+   ```sh
+   ssh username@ubuntu_ip_address
+   ```
 
-If you don't want to enter passwords everytime you can skip in by running the following command
+## (Optional) Setup Passwordless Login
+
+Generate SSH key and copy to remote machine:
 ```sh
 ssh-keygen -t rsa -b 4096
 ssh-copy-id username@ip_address
 ```
 
-## Setup and Alias 
+## Setup an Alias
 
-If you want to setup an alias then navigate to
-```sh
-cd ~/.ssh/
-```
+1. Navigate to SSH config directory:
+   ```sh
+   cd ~/.ssh/
+   ```
 
-and create or modify the `config` file there
-```sh
-Host alias
-    HostName ip_address
-    User username
-```
-then you can login with 
+2. Create or modify the `config` file:
+   ```sh
+   Host alias
+       HostName ip_address
+       User username
+   ```
 
-```sh
-ssh alias
-```
+3. Login using the alias:
+   ```sh
+   ssh alias
+   ```
