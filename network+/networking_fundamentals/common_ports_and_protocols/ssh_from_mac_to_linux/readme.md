@@ -73,3 +73,8 @@ ssh-copy-id username@ip_address
    ```sh
    ssh alias
    ```
+## Exit
+Exit a remote session by typing
+```sh
+exit
+```
